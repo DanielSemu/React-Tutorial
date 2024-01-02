@@ -1,12 +1,14 @@
 
 import './App.css';
 import React from 'react';
-import Welcome from './components/Welcome';
+//import Welcome from './components/Welcome';
 // import Greet from './components/Greet';
 // import Hello from './components/Hello';
 //  import Greet1 from './components/Greet';
 // import Message from './components/Message';
 // import Counter from './components/Counter';
+import FunctionClick from './components/FunctionClick';
+import ClassClick from './components/ClassClick';
 function App() {
   // const name="Danielw"
   return (
@@ -24,9 +26,12 @@ function App() {
     </Hello>
 
     <Welcome name="Daniel"/>*/}
-    <Welcome name=" Class1" fName="fname_Class1"></Welcome> 
+    {/* <Welcome name=" Class1" fName="fname_Class1"></Welcome>  */}
 {/* <Message/>
 <Counter/> */}
+
+  <FunctionClick/>
+  <ClassClick/>
     </div>
   );
 }
