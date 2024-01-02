@@ -7,8 +7,11 @@ import React from 'react';
 //  import Greet1 from './components/Greet';
 // import Message from './components/Message';
 // import Counter from './components/Counter';
-import FunctionClick from './components/FunctionClick';
-import ClassClick from './components/ClassClick';
+// import FunctionClick from './components/FunctionClick';
+// import ClassClick from './components/ClassClick';
+import EventBing from './components/EventBing';
+import ParentComponent from './components/ParentComponent';
+
 function App() {
   // const name="Danielw"
   return (
@@ -30,8 +33,10 @@ function App() {
 {/* <Message/>
 <Counter/> */}
 
-  <FunctionClick/>
-  <ClassClick/>
+  {/* <FunctionClick/>
+  <ClassClick/> */}
+  <EventBing/>
+  <ParentComponent/>
     </div>
   );
 }
