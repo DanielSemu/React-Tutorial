@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ChildComponent from './ChildComponent'
-
+//rce class component snippet 
  class ParentComponent extends Component {
   constructor(props) {
     super(props)

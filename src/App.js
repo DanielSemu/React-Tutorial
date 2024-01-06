@@ -9,8 +9,10 @@ import React from 'react';
 // import Counter from './components/Counter';
 // import FunctionClick from './components/FunctionClick';
 // import ClassClick from './components/ClassClick';
-import EventBing from './components/EventBing';
-import ParentComponent from './components/ParentComponent';
+// import EventBing from './components/EventBing';
+// import ParentComponent from './components/ParentComponent';
+import UserGreeting from './components/UserGreeting';
+import NameList from './components/NameList';
 
 function App() {
   // const name="Danielw"
@@ -35,8 +37,11 @@ function App() {
 
   {/* <FunctionClick/>
   <ClassClick/> */}
-  <EventBing/>
-  <ParentComponent/>
+  {/* <EventBing/>
+  <ParentComponent/> */}
+
+  <UserGreeting/>
+  <NameList/>
     </div>
   );
 }
