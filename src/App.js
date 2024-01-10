@@ -11,8 +11,9 @@ import React from 'react';
 // import ClassClick from './components/ClassClick';
 // import EventBing from './components/EventBing';
 // import ParentComponent from './components/ParentComponent';
-import UserGreeting from './components/UserGreeting';
-import NameList from './components/NameList';
+// import UserGreeting from './components/UserGreeting';
+// import NameList from './components/NameList';
+import ClassComponent from './components/ClassComponent';
 
 function App() {
   // const name="Danielw"
@@ -40,8 +41,9 @@ function App() {
   {/* <EventBing/>
   <ParentComponent/> */}
 
-  <UserGreeting/>
-  <NameList/>
+  {/* <UserGreeting/>
+  <NameList/> */}
+  <ClassComponent/>
     </div>
   );
 }
