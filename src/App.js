@@ -1,6 +1,8 @@
 
 import './App.css';
-import React from 'react';
+
+import React, { Component } from 'react'
+
 //import Welcome from './components/Welcome';
 // import Greet from './components/Greet';
 // import Hello from './components/Hello';
@@ -13,40 +15,86 @@ import React from 'react';
 // import ParentComponent from './components/ParentComponent';
 // import UserGreeting from './components/UserGreeting';
 // import NameList from './components/NameList';
-import ClassComponent from './components/ClassComponent';
+// import ClassComponent from './components/ClassComponent';
+import CardList from './components/card-list/CardList';
 
-function App() {
-  // const name="Danielw"
-  return (
-    <div className="App">
-    {/* <First/>
-    <Second />
-    <Third/>
-    <Greet name="Daniel" heroname="Superman" />
-     */}
-    {/* <Hello name=" dfrde" fname="Semhjgu" >
-      <button>Button</button>
-    </Hello>
-    <Hello name=" Ash" fname="Rise" >
-      <h1>Hello from Children props</h1>
-    </Hello>
+// function App() {
+//   // const name="Danielw"
+//   return (
+//     <div className="App">
+//     {/* <First/>
+//     <Second />
+//     <Third/>
+//     <Greet name="Daniel" heroname="Superman" />
+//      */}
+//     {/* <Hello name=" dfrde" fname="Semhjgu" >
+//       <button>Button</button>
+//     </Hello>
+//     <Hello name=" Ash" fname="Rise" >
+//       <h1>Hello from Children props</h1>
+//     </Hello>
 
-    <Welcome name="Daniel"/>*/}
-    {/* <Welcome name=" Class1" fName="fname_Class1"></Welcome>  */}
-{/* <Message/>
-<Counter/> */}
+//     <Welcome name="Daniel"/>*/}
+//     {/* <Welcome name=" Class1" fName="fname_Class1"></Welcome>  */}
+// {/* <Message/>*/}
 
-  {/* <FunctionClick/>
-  <ClassClick/> */}
-  {/* <EventBing/>
-  <ParentComponent/> */}
 
-  {/* <UserGreeting/>
-  <NameList/> */}
-  <ClassComponent/>
-    </div>
-  );
+//   {/* <FunctionClick/>
+//   <ClassClick/> */}
+//   {/* <EventBing/>
+//   <ParentComponent/> */}
+
+//   {/* <UserGreeting/>
+//   <NameList/> 
+//   <ClassComponent/>*/}
+//   <CardList >
+//     <h1>Daniel Semu</h1>
+//     <h2>Ashenafi Debela</h2>
+//     <h3>Dawit Tesfaye</h3>
+//   </CardList>
+//     </div>
+//   );
+// }
+
+
+class App extends Component {
+     constructor(){
+        super();
+        this.state={
+            // String:'Hello DanielS',
+            monesters: []
+        };
+     }
+     componentDidMount(){
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response=>response.json()).then(users=>this.setState({monesters:users}))
+     }
+  render() {
+    // we can Modify state only using setSate method
+    return (
+      <div className='App'>
+        
+        <CardList monesters={this.state.monesters} />
+          
+        
+        
+        {/*<h1>{this.state.String}</h1>
+        <button onClick={()=>this.setState({String: "Hello Andrel"})}>Change State</button>
+         Here we are Using anonymous functions that means without funtion name  */}
+      </div>
+    )
+  }
 }
+export default App;
+
+
+
+
+
+
+
+
+
 
 // class First extends React.Component {  
 //   render() {  
@@ -64,4 +112,4 @@ function App() {
 // function Third(){
 //   return <h1>Hello I am from the Third</h1>
 // }
-export default App;
+// export default App;
